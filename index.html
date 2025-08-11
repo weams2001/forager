@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="manifest" href="manifest.json" />
+    </head>
+    <body onload="loadFromStorage()">
+        <div class="screen" id="screen">
+            <div class="search-interface">
+                <div class="inputs">
+                    <div class="input-group">
+                        <label class="input-label" for="search">
+                            Search Files
+                        </label>
+                        <form name="SearchInput" class="base-form" onsubmit="searchFiles(event)">
+                            <input name ="searchField" class="text-input" id="search" type="text" oninput="changedSearch()">
+                            <input type="submit" value="Search"/>
+                        </form>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label" for="search">
+                            Load Files
+                        </label>
+                        <form name="FileInput" class="base-form" onsubmit="submitFile(event)">
+                            <input class="file-input" id="fileinput" type="file" value="Select File" accept='.csv,.tsv'/>
+                            <label class="input-label" for="dataset">Dataset Name:</label>
+                            <input class="text-input" id="dataset" type="text" name="datasetName">
+                            <input type="submit" value="Add Selected File"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="results" id="results" style="display: none;">
+                    <div class="results-content" id="results-content"></div>
+                    <button onclick="clearResults()">Clear Results</button>
+                </div>
+            </div>
+            <div class="files-disp" id="files-disp" hidden>
+                <h2 style="margin-bottom: 0; color: white">
+                    Added Files:
+                </h2>
+                <span style="color: white">
+                    (click to remove)
+                </span>
+                <div class="added-files" id="added-files"></div>
+            </div>
+        </div>
+        <script type="module"> import {parse} from "./src/csv.js"</script>
+        <script type="text/javascript" src="./src/app.js"></script>
+    </body>
+</html>

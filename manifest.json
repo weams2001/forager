@@ -1,0 +1,15 @@
+{
+  "short_name": "Forager",
+  "name": "Forager",
+  "icons": [
+    {
+      "src": "/mushrooms.jpg",
+      "sizes": "2000x2000",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "white"
+}

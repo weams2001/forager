@@ -1,0 +1,125 @@
+html{
+    height: 100%;
+    font-family: Sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+table {
+    background-color: white;
+}
+
+.signin {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-image: url("mushrooms.jpg");
+    align-items: center;
+}
+
+.screen {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(164, 0, 0);
+}
+
+.search-interface {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.inputs {
+    display: inline-flex;
+    height: fit-content;
+    width: fit-content;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.results {
+    margin-bottom: 32px;
+}
+
+.input-group {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.input-label {
+    color: whitesmoke;
+    font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.file-input {
+    font-weight: bold;
+    width: 14rem;
+    color: white;
+}
+
+.text-input {
+    font-weight: bold;
+    width: 20rem;
+}
+
+.base-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.files-disp {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: rgb(100, 0, 0);
+}
+
+.added-files {
+    display: flex;
+    gap: 8px;
+    margin: 16px;
+    overflow-x: scroll;
+    max-height: 116px;
+}
+
+@media screen and (max-width:600px)  {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    
+    .inputs {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:480px)  {
+    /* smartphones, Android phones, landscape iPhone */ 
+    
+
+}
+
+@media screen and (max-width:320px)  {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    
+
+}
