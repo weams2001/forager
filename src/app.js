@@ -1,3 +1,5 @@
+import {parse} from "./csv.js"
+
 var files = {};
 //map of ids to files for faster lookup
 var lookupTable = {}
